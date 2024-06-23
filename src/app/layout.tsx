@@ -3,6 +3,8 @@ export const metadata = {
   description: 'Portolio Shubh Patel',
 }
 
+import Link from "next/link"
+
 export default function RootLayout({
   children,
 }: {
@@ -10,7 +12,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <p style={{ display: 'flex', gap: '10px', justifyContent: 'center', padding: '10px' }}>
+          <Link href="/">shubhp</Link>
+          <Link href="/projects">projects</Link>
+          <Link href="/about">about</Link>
+        </p>
+        {children}
+      </body>
     </html>
   )
 }
